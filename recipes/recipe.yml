@@ -3,11 +3,16 @@
 # image will be published to ghcr.io/<user>/<name>
 name: grumbeer-os
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: My personal experiment in making my own custom linux.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 42 # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/base-main
+
+image-version: latest # latest is also supported if you want new updates ASAP
+
+# stages:
+# https://blue-build.org/reference/recipe/#stages
+# https://blue-build.org/reference/stages/
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -20,11 +25,21 @@ modules:
   - type: dnf
     repos:
       copr:
-        - atim/starship
+        - scottames/ghostty
     install:
       packages:
-        - micro
-        - starship
+        - helix
+        - fish
+        - entr
+        - fd
+        - bat
+        - fzf
+        - niri
+        - greetd
+        - greetd-tuigreet
+        - ghostty
+        - fuzzel
+        - waybar
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -37,9 +52,28 @@ modules:
       - notify: true # Send notification after install/uninstall is finished (true/false)
         scope: system
         # If no repo information is specified, Flathub will be used by default
-        install: # system flatpaks we want all users to have and not remove
+        install:
+          # system flatpaks we want all users to have and not remove
+          # generically useful
+          - com.github.tchx84.Flatseal
+          - com.valvesoftware.Steam
           - org.mozilla.firefox
-          - org.gnome.Loupe
+          - it.mijorus.gearlever
+          - org.kde.gwenview
+          - org.kde.okular
+          - org.libreoffice.LibreOffice
+          - org.videolan.VLC
+
+          # personal crap
+          - net.cozic.joplin_desktop
+          - org.signal.Signal
+          - one.ablaze.floorp
+          - io.github.ungoogled_software.ungoogled_chromium
+          - com.bitwarden.desktop
+          - com.mastermindzh.tidal-hifi
+          - com.nextcloud.desktopclient.nextcloud
+          - com.github.wwmm.easyeffects
+
       - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
