@@ -81,5 +81,6 @@ modules:
       ID: grumbeer_os
       NAME: GrumbeerOS
       PRETTY_NAME: GrumbeerOS
+      DEFAULT_HOSTNAME: grumbeer
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
