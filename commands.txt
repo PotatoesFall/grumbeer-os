@@ -1,4 +1,4 @@
 # install blue build CLI: https://github.com/blue-build/cli?tab=readme-ov-file
 bluebuild generate ./recipes/recipe.yml -o Containerfile
 bluebuild build ./recipes/recipe.yml
-sudo bluebuild generate-iso --iso-name grumbeer-os.iso recipe recipes/recipe.yml
+sudo bluebuild generate-iso --iso-name grumbeer-os.iso -B podman -R podman -I podman recipe recipes/recipe.yml

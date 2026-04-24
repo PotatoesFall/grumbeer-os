@@ -6,8 +6,7 @@ name: grumbeer-os
 description: My personal experiment in making my own custom linux.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/base-main
-
+base-image: ghcr.io/wayblueorg/niri
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # stages:
@@ -23,23 +22,21 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: dnf
-    repos:
-      copr:
-        - scottames/ghostty
-    install:
-      packages:
-        - helix
-        - fish
-        - entr
-        - fd
-        - bat
-        - fzf
-        - niri
-        - greetd
-        - greetd-tuigreet
-        - ghostty
-        - fuzzel
-        - waybar
+    # repos:
+    #   copr:
+    #     - scottames/ghostty
+    # install:
+    #   packages:
+    #     - ghostty
+    #     - helix
+    #     - fish
+    #     - entr
+    #     - fd
+    #     - bat
+    #     - fzf
+    #     - niri
+    #     - greetd
+    #     - greetd-tuigreet
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -74,6 +71,15 @@ modules:
           - com.nextcloud.desktopclient.nextcloud
           - com.github.wwmm.easyeffects
 
-      - scope: user # Also add Flathub user repo, but no user packages
+  - type: chezmoi
+    repository: "https://codeberg.org/PotatoesFall/chezmoi" # my dotfiles repo
+    all-users: true # make users have to enable chezmoi manually
+    file-conflict-policy: replace # override changed files with those from the repo
+
+  - type: os-release
+    properties:
+      ID: grumbeer_os
+      NAME: GrumbeerOS
+      PRETTY_NAME: GrumbeerOS
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
