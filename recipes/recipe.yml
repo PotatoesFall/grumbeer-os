@@ -22,21 +22,17 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: dnf
-    # repos:
-    #   copr:
-    #     - scottames/ghostty
-    # install:
-    #   packages:
-    #     - ghostty
-    #     - helix
-    #     - fish
-    #     - entr
-    #     - fd
-    #     - bat
-    #     - fzf
-    #     - niri
-    #     - greetd
-    #     - greetd-tuigreet
+    repos:
+      copr:
+        - scottames/ghostty
+    install:
+      packages:
+        - ghostty
+        - helix
+        - fish
+        - entr
+        - fd
+        - bat
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
