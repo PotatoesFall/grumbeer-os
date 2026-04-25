@@ -41,10 +41,11 @@ modules:
         - nerd-fonts
 
         # terra
-        - # terra-release # apparently terra repo requires this? let's try without for now
+        # - terra-release # apparently terra repo requires this? let's try without for now
         - noctalia-shell
 
         # fedora
+        - npm
         - helix
         - fish
         - entr
