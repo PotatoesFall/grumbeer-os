@@ -50,7 +50,6 @@ modules:
         - entr
         - fd
         - bat
-        - ksshaskpass # git wants this for unlocking ssh key
 
     remove:
       packages:
