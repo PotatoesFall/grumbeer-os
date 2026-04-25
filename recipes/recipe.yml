@@ -27,17 +27,31 @@ modules:
         - scottames/ghostty
         - zawertun/hack-fonts
         - che/nerd-fonts
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
     install:
       packages:
+        # scottames/ghostty
         - ghostty
+        
+        # zawertun/hack-fonts
         - hack-fonts
+
+        # che/nerd-fonts
         - nerd-fonts
+
+        # terra
+        - # terra-release # apparently terra repo requires this? let's try without for now
+        - noctalia-shell
+
+        # fedora
         - helix
         - fish
         - entr
         - fd
         - bat
         - ksshaskpass # git wants this for unlocking ssh key
+
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
