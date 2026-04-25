@@ -25,14 +25,19 @@ modules:
     repos:
       copr:
         - scottames/ghostty
+        - zawertun/hack-fonts
+        - che/nerd-fonts
     install:
       packages:
         - ghostty
+        - hack-fonts
+        - nerd-fonts
         - helix
         - fish
         - entr
         - fd
         - bat
+        - ksshaskpass # git wants this for unlocking ssh key
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
