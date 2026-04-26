@@ -57,6 +57,7 @@ modules:
         - npm
       remove:
         - toolbox
+        - waylock
 
     remove:
       packages:
