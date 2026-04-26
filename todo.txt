@@ -1,0 +1,15 @@
+- topgrade
+- helix `runtime` directory?
+	- the theme is for now resolved with chezmoi, maybe topgrade will fix grammars?
+- fonts
+	- hack https://copr.fedorainfracloud.org/coprs/zawertun/hack-fonts/
+	- fira code https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/
+	- also figure out emojis in alacritty?
+- some language servers like yaml?
+- cargo, go, zig?
+- npm
+
+- things that might be fixed in noctalia?
+	- ksshaskpass??
+	- emoji picker?
+	- clipboard manager?

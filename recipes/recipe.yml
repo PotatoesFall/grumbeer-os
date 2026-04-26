@@ -51,6 +51,9 @@ modules:
         - entr
         - fd
         - bat
+        - npm
+      remove:
+        - toolbox
 
     remove:
       packages:
