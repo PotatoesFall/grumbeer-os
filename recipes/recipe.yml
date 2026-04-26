@@ -78,6 +78,7 @@ modules:
           - org.kde.okular
           - org.libreoffice.LibreOffice
           - org.videolan.VLC
+          - org.kde.kcharselect
 
           # personal crap
           - net.cozic.joplin_desktop
