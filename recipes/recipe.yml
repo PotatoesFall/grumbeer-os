@@ -27,7 +27,7 @@ modules:
         - scottames/ghostty
         - zawertun/hack-fonts
         - che/nerd-fonts
-        - mineori/satty
+        - mineiro/satty
       files:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
     install:
