@@ -55,6 +55,7 @@ modules:
         - fd
         - bat
         - npm
+        - fastfetch
 
     remove:
       packages:
