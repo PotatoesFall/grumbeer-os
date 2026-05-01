@@ -93,6 +93,7 @@ modules:
           - com.mastermindzh.tidal-hifi
           - com.nextcloud.desktopclient.nextcloud
           - com.github.wwmm.easyeffects
+          - com.github.PintaProject.Pinta
 
   - type: chezmoi
     repository: "https://codeberg.org/PotatoesFall/chezmoi" # my dotfiles repo
