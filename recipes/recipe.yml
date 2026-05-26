@@ -46,6 +46,7 @@ modules:
 
         # terra
         - noctalia-shell
+        - bottom
 
         # fedora
         - npm
