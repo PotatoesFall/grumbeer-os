@@ -92,7 +92,6 @@ modules:
           - io.github.ungoogled_software.ungoogled_chromium
           - com.bitwarden.desktop
           - com.mastermindzh.tidal-hifi
-          - com.nextcloud.desktopclient.nextcloud
           - com.github.wwmm.easyeffects
           - com.github.PintaProject.Pinta
 
