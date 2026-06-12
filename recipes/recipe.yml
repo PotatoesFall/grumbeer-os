@@ -28,6 +28,7 @@ modules:
         - zawertun/hack-fonts
         - che/nerd-fonts
         - mineiro/satty
+        - atim/bottom
       files:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
     install:
@@ -44,9 +45,11 @@ modules:
         # mineiro/satty
         - satty
 
+        # atim/bottom
+        - bottom
+
         # terra
         - noctalia-shell
-        - bottom
 
         # fedora
         - npm
