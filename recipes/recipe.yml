@@ -61,6 +61,7 @@ modules:
         - npm
         - fastfetch
         - gamescope
+        - podman-compose
 
     remove:
       packages:
